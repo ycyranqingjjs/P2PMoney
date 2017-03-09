@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_top"/>
+
+    <cn.itcast.wh.p2pmoney12.ui.MyScrollview
+        android:id="@+id/myscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_barner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v4.view.ViewPager>
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/circle_barner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:padding="10dp">
+                </com.viewpagerindicator.CirclePageIndicator>
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="4dp"
+                    android:drawableRight="@drawable/recommend"
+                    android:text="乐享活180天计划第一期"
+                    android:textColor="#303030"
+                    android:textSize="20sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_attribute_bg"
+                    android:gravity="center"
+                    android:text="本息保障"
+                    android:textColor="#888888"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_attribute_bg"
+                    android:gravity="center"
+                    android:text="高额收益"
+                    android:textColor="#888888"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_attribute_bg"
+                    android:gravity="center"
+                    android:text="每日计息"
+                    android:textColor="#888888"/>
+            </LinearLayout>
+
+            <!-- 推荐产品信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <!--#18b4ed-->
+                <!-- 圆环进度-->
+                <cn.itcast.wh.p2pmoney12.ui.RoundProgress
+                    android:id="@+id/p_progresss"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:roundColor="@android:color/darker_gray"
+                    app:roundProgressColor="@android:color/holo_red_dark"
+                    app:roundWidth="10dp"
+                    app:textColor="#18b4ed"
+                    app:textSize="20sp">
+                </cn.itcast.wh.p2pmoney12.ui.RoundProgress>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预期年利率"
+                    android:textColor="#303030"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/p_yearlv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="10.00%+2.00%"
+                    android:textColor="#303030"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/home"
+                android:text="立即加入"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/guarantee_icon"
+                android:gravity="center"
+                android:text="风险保障金由光大银行监管"
+                android:textColor="@color/product_detail_common"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+    </cn.itcast.wh.p2pmoney12.ui.MyScrollview>
+</LinearLayout>

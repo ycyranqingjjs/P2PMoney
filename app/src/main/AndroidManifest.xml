@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="cn.itcast.wh.p2pmoney12"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 配置所需权限-->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+
+    <application
+        android:name="cn.itcast.wh.p2pmoney12.common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/StyledIndicators">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.LoginActivity"/>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.UserInfoActivity"/>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.ChongzhiActivity"/>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.TiXianActivity"/>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.LineChartActivity"/>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.BarChartActivity"/>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.PieChartActivity2"/>
+        <activity android:name="cn.itcast.wh.p2pmoney12.activity.ToggleActivity"/>
+
+        <!-- 集成支付宝组件声明-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+    </application>
+
+</manifest>
